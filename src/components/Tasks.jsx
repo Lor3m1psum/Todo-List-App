@@ -15,9 +15,9 @@ export const Tasks = () => {
   const [tasks, setTasks] = useState(getLocalStorage("tasks") || []);
 
   const onDelete = (indexElement) => {
-    const deleteTasks = tasks.filter((_, index) => index !== indexElement);
-    setTasks(deleteTasks);
-    setLocalStorage("tasks", deleteTasks);
+    const updateTasks = tasks.filter((_, index) => index !== indexElement);
+    setTasks(updateTasks);
+    setLocalStorage("tasks", updateTasks);
   };
 
   const handleClick = () => {

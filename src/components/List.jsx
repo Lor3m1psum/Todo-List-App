@@ -1,4 +1,11 @@
-import { Button, Heading, Text, UnorderedList, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  HStack,
+  Text,
+  UnorderedList,
+  VStack,
+} from "@chakra-ui/react";
 
 export const List = ({ tasks, onDelete }) => {
   return (
@@ -6,11 +13,13 @@ export const List = ({ tasks, onDelete }) => {
       <Heading as="h4">Tasks list</Heading>
       <UnorderedList>
         {tasks.map((task, index) => (
-          <Text key={index + task}>{task}</Text>
+          <HStack key={index + task}>
+            <Text>{task}</Text>
+            <Button fontSize="sm" onClick={() => onDelete(index)}>
+              Delete
+            </Button>
+          </HStack>
         ))}
-        <Button fontSize="sm" onClick={() => onDelete(index)}>
-          Delete
-        </Button>
       </UnorderedList>
     </VStack>
   );
