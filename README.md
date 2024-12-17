@@ -1,6 +1,6 @@
 # To-Do List Application
 
-This is a simple to-do list application developed with **React**, **Chakra UI**, and **React Icons**.
+This is a simple to-do list application developed with **React**, **Chakra UI**, and **React Icons** also saved tasks information in the browser with **LocalStorage** so the user can handle properly.
 
 ## Resources and Tools
 
