@@ -4,7 +4,12 @@ import { FaTrash } from "react-icons/fa";
 
 const Item = ({ task, onToggleComplete, onDeleteTask }) => {
   return (
-    <ListItem display="flex" alignItems="center" gap="0.5rem">
+    <ListItem
+      display="flex"
+      alignItems="center"
+      gap="1rem"
+      justifyContent="space-between"
+    >
       <HStack>
         <Text textDecoration={task.completed ? "line-through" : "none"}>
           {task.text}
